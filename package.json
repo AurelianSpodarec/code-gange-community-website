@@ -1,0 +1,20 @@
+{
+  "name": "code-gange-community-website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/coltonehrman/code-gange-community-website.git",
+  "license": "MIT",
+  "scripts": {
+    "babel": "babel --presets es2015 -s true -w src/server.js -o dist/server.js",
+    "start": "nodemon dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.17.5"
+  }
+}

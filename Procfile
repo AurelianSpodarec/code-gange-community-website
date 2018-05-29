@@ -1,1 +1,1 @@
-web: yarn run deploy
+web: node dist/server.js

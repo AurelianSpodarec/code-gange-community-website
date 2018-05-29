@@ -10,8 +10,8 @@ var app = (0, _express2.default)();
 
 app.use(_express2.default.static('src'));
 
-app.listen(3000, function () {
-    console.log('Server is listening on http://localhost:3000');
-});
+var PORT = process.env.PORT || 3000;
 
-//# sourceMappingURL=server.js.map
+app.listen(PORT, function () {
+    console.log('Server is listening on http://localhost:' + PORT);
+});

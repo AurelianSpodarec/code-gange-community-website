@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "babel": "babel --presets es2015 -s true -w src/server.js -o dist/server.js",
-    "start": "nodemon dist/server.js"
+    "start": "nodemon dist/server.js",
+    "deploy": "node dist/server.js"
   },
   "dependencies": {
     "express": "^4.16.3"

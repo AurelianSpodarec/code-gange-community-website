@@ -9,7 +9,6 @@ yarn-error.log*
 .idea/
 dump.rdb
 .vscode/
-public/*
 .nyc_output/
 
 .env.local

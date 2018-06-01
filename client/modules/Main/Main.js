@@ -6,9 +6,9 @@ import { connect } from 'react-redux';
 // import styles from './Main.css';
 
 // Import Assets
-import image1 from './assets/images/01.jpg';
-import image2 from './assets/images/02.jpg';
-import image3 from './assets/images/03.jpg';
+// import image1 from './assets/images/01.jpg';
+// import image2 from './assets/images/02.jpg';
+// import image3 from './assets/images/03.jpg';
 
 // Import Components
 import Helmet from 'react-helmet';
@@ -39,123 +39,48 @@ export function Main() {
         ]}
       />
 
-      {/* <!-- Navigation --> */}
-      <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">Start Bootstrap</a>
-          <button
-            className="navbar-toggler" type="button"
-            data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+      <div className="overlay"></div>
 
-          <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">Sign Up</a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link" href="#">Log In</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <header className="masthead text-center text-white">
-        <div className="masthead-content">
-          <div className="container">
-            <h1 className="masthead-heading mb-0">One Page Wonder</h1>
-            <h2 className="masthead-subheading mb-0">Will Rock Your SocksOff</h2>
-            <a href="#" className="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
-          </div>
-        </div>
-
-        <div className="bg-circle-1 bg-circle"></div>
-        <div className="bg-circle-2 bg-circle"></div>
-        <div className="bg-circle-3 bg-circle"></div>
-        <div className="bg-circle-4 bg-circle"></div>
-      </header>
-
-      <section>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 order-lg-2">
-              <div className="p-5">
-                <img className="img-fluid rounded-circle" src={image1} alt="" />
-              </div>
-            </div>
-
-            <div className="col-lg-6 order-lg-1">
-              <div className="p-5">
-                <h2 className="display-4">For those about to rock...</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem,
-                  ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.
-                </p>
+      <div className="masthead">
+        <div className="masthead-bg"></div>
+        <div className="container h-100">
+          <div className="row h-100">
+            <div className="col-12 my-auto">
+              <div className="masthead-content text-white py-5 py-md-0">
+                <h1 className="mb-3">Coming Soon!</h1>
+                <p className="mb-5">We're working hard to finish the development of this site. Our target launch date is
+                  <strong>January 2019</strong>! Sign up for updates using the form below!</p>
+                <div className="input-group input-group-newsletter">
+                  <input type="email" className="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon" />
+                  <div className="input-group-append">
+                    <button className="btn btn-secondary" type="button">Notify Me!</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="p-5">
-                <img className="img-fluid rounded-circle" src={image2} alt="" />
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="p-5">
-                <h2 className="display-4">We salute you!</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem,
-                  ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 order-lg-2">
-              <div className="p-5">
-                <img className="img-fluid rounded-circle" src={image3} alt="" />
-              </div>
-            </div>
-
-            <div className="col-lg-6 order-lg-1">
-              <div className="p-5">
-                <h2 className="display-4">Let there be rock!</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem,
-                  ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Footer --> */}
-      <footer className="py-5 bg-black">
-        <div className="container">
-          <p className="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
-        </div>
-        {/* <!-- /.container --> */}
-      </footer>
+      <div className="social-icons">
+        <ul className="list-unstyled text-center mb-0">
+          <li className="list-unstyled-item">
+            <a href="#">
+              <i className="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li className="list-unstyled-item">
+            <a href="#">
+              <i className="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li className="list-unstyled-item">
+            <a href="#">
+              <i className="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

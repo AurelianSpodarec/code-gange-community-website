@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/mern-test node_modules/.bin/nyc node --harmony node_modules/.bin/ava",
-    "watch:test": "npm run test -- --watch",
-    "cover": "nyc npm run test",
-    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "start": "cross-env NODE_ENV=production node index.js",
+    "start": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=development nodemon index.js",
     "start:prod": "cross-env NODE_ENV=production node index.js",
-    "bs": "npm run clean && npm run build && npm run build:server && npm run start:prod",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "bs": "npm run clean && npm run build && npm run start:prod",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.config.server.js",
     "git:add": "git add .",
     "clean": "rimraf dist",
@@ -18,11 +15,10 @@
     "lint": "eslint client server"
   },
   "pre-commit": [
+    "clean",
     "build",
-    "build:server",
     "git:add",
-    "lint",
-    "test"
+    "lint"
   ],
   "repository": {
     "type": "git",
@@ -51,7 +47,6 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "sanitize-html": "^1.11.4",
-    "ava": "^0.15.2",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-webpack-loaders": "^0.7.0",
@@ -68,7 +63,6 @@
     "css-loader": "^0.23.1",
     "css-modules-require-hook": "^4.0.1",
     "cssnano": "^3.7.0",
-    "enzyme": "^2.3.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-ava": "^2.4.0",
@@ -80,12 +74,8 @@
     "file-loader": "^0.8.5",
     "jsdom": "^9.2.1",
     "json-loader": "^0.5.4",
-    "mock-css-modules": "^1.0.0",
-    "mockgoose": "^6.0.3",
-    "nock": "^8.0.0",
     "nodemon": "^1.9.2",
     "null-loader": "^0.1.1",
-    "nyc": "^6.4.4",
     "postcss-cssnext": "^2.6.0",
     "postcss-focus": "^1.0.0",
     "postcss-loader": "^0.9.1",
@@ -93,14 +83,11 @@
     "pre-commit": "^1.1.3",
     "react-addons-test-utils": "^15.1.0",
     "react-hot-loader": "^3.0.0-beta.2",
-    "redux-ava": "^2.0.0",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
     "rimraf": "^2.5.2",
-    "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
-    "supertest": "^1.2.0",
     "url-loader": "^0.5.7",
     "webpack": "2.1.0-beta.8",
     "webpack-dev-middleware": "^1.6.1",
@@ -110,43 +97,6 @@
     "webpack-manifest-plugin": "^1.0.1"
   },
   "engines": {
-    "node": "9.x.x",
     "yarn": "1.6.0"
-  },
-  "ava": {
-    "files": [
-      "client/**/*.spec.js",
-      "server/**/*.spec.js"
-    ],
-    "source": [
-      "client/**/*.js",
-      "server/**/*.js"
-    ],
-    "failFast": true,
-    "babel": "inherit",
-    "require": [
-      "./server/util/setup-test-env.js"
-    ]
-  },
-  "nyc": {
-    "include": [
-      "client/**/*.js",
-      "server/**/*.js"
-    ],
-    "exclude": [
-      "**/*.spec.js",
-      "client/reducers.js",
-      "client/store.js",
-      "client/routes.js",
-      "server/util/setup-test-env.js",
-      "server/util/test-helpers.js",
-      "server/config.js",
-      "server/dummyData.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text",
-      "html"
-    ]
   }
 }

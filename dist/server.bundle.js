@@ -1158,7 +1158,9 @@
 	// import styles from './Main.css';
 	
 	// Import Assets
-	
+	// import image1 from './assets/images/01.jpg';
+	// import image2 from './assets/images/02.jpg';
+	// import image3 from './assets/images/03.jpg';
 	
 	// Import Components
 	
@@ -1170,18 +1172,6 @@
 	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactRedux = __webpack_require__(1);
-	
-	var _ = '/' + "a7ee6287db0d18a7872f313021b46af0.jpg";
-	
-	var _2 = _interopRequireDefault(_);
-	
-	var _3 = '/' + "0c990242997737a286c6287e3378e154.jpg";
-	
-	var _4 = _interopRequireDefault(_3);
-	
-	var _5 = '/' + "8079bc527d4127b55fb368f53b56cb15.jpg";
-	
-	var _6 = _interopRequireDefault(_5);
 	
 	var _reactHelmet = __webpack_require__(3);
 	
@@ -1197,128 +1187,64 @@
 	// import { toggleAddPost } from './AppActions';
 	// import { switchLanguage } from '../../modules/Intl/IntlActions';
 	
-	var _ref = _jsx('nav', {
-	  className: 'navbar navbar-expand-lg navbar-dark navbar-custom fixed-top'
-	}, void 0, _jsx('div', {
-	  className: 'container'
-	}, void 0, _jsx('a', {
-	  className: 'navbar-brand',
-	  href: '#'
-	}, void 0, 'Start Bootstrap'), _jsx('button', {
-	  className: 'navbar-toggler',
-	  type: 'button',
-	  'data-toggle': 'collapse',
-	  'data-target': '#navbarResponsive',
-	  'aria-controls': 'navbarResponsive',
-	  'aria-expanded': 'false',
-	  'aria-label': 'Toggle navigation'
-	}, void 0, _jsx('span', {
-	  className: 'navbar-toggler-icon'
-	})), _jsx('div', {
-	  className: 'collapse navbar-collapse',
-	  id: 'navbarResponsive'
-	}, void 0, _jsx('ul', {
-	  className: 'navbar-nav ml-auto'
-	}, void 0, _jsx('li', {
-	  className: 'nav-item'
-	}, void 0, _jsx('a', {
-	  className: 'nav-link',
-	  href: '#'
-	}, void 0, 'Sign Up')), _jsx('li', {
-	  className: 'nav-item'
-	}, void 0, _jsx('a', {
-	  className: 'nav-link',
-	  href: '#'
-	}, void 0, 'Log In'))))));
+	var _ref = _jsx('div', {
+	  className: 'overlay'
+	});
 	
-	var _ref2 = _jsx('header', {
-	  className: 'masthead text-center text-white'
+	var _ref2 = _jsx('div', {
+	  className: 'masthead'
 	}, void 0, _jsx('div', {
-	  className: 'masthead-content'
+	  className: 'masthead-bg'
+	}), _jsx('div', {
+	  className: 'container h-100'
 	}, void 0, _jsx('div', {
-	  className: 'container'
+	  className: 'row h-100'
+	}, void 0, _jsx('div', {
+	  className: 'col-12 my-auto'
+	}, void 0, _jsx('div', {
+	  className: 'masthead-content text-white py-5 py-md-0'
 	}, void 0, _jsx('h1', {
-	  className: 'masthead-heading mb-0'
-	}, void 0, 'One Page Wonder'), _jsx('h2', {
-	  className: 'masthead-subheading mb-0'
-	}, void 0, 'Will Rock Your SocksOff'), _jsx('a', {
-	  href: '#',
-	  className: 'btn btn-primary btn-xl rounded-pill mt-5'
-	}, void 0, 'Learn More'))), _jsx('div', {
-	  className: 'bg-circle-1 bg-circle'
+	  className: 'mb-3'
+	}, void 0, 'Coming Soon!'), _jsx('p', {
+	  className: 'mb-5'
+	}, void 0, 'We\'re working hard to finish the development of this site. Our target launch date is', _jsx('strong', {}, void 0, 'January 2019'), '! Sign up for updates using the form below!'), _jsx('div', {
+	  className: 'input-group input-group-newsletter'
+	}, void 0, _jsx('input', {
+	  type: 'email',
+	  className: 'form-control',
+	  placeholder: 'Enter email...',
+	  'aria-label': 'Enter email...',
+	  'aria-describedby': 'basic-addon'
 	}), _jsx('div', {
-	  className: 'bg-circle-2 bg-circle'
-	}), _jsx('div', {
-	  className: 'bg-circle-3 bg-circle'
-	}), _jsx('div', {
-	  className: 'bg-circle-4 bg-circle'
-	}));
+	  className: 'input-group-append'
+	}, void 0, _jsx('button', {
+	  className: 'btn btn-secondary',
+	  type: 'button'
+	}, void 0, 'Notify Me!'))))))));
 	
-	var _ref3 = _jsx('section', {}, void 0, _jsx('div', {
-	  className: 'container'
-	}, void 0, _jsx('div', {
-	  className: 'row align-items-center'
-	}, void 0, _jsx('div', {
-	  className: 'col-lg-6 order-lg-2'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('img', {
-	  className: 'img-fluid rounded-circle',
-	  src: _2.default,
-	  alt: ''
-	}))), _jsx('div', {
-	  className: 'col-lg-6 order-lg-1'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('h2', {
-	  className: 'display-4'
-	}, void 0, 'For those about to rock...'), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.'))))));
-	
-	var _ref4 = _jsx('section', {}, void 0, _jsx('div', {
-	  className: 'container'
-	}, void 0, _jsx('div', {
-	  className: 'row align-items-center'
-	}, void 0, _jsx('div', {
-	  className: 'col-lg-6'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('img', {
-	  className: 'img-fluid rounded-circle',
-	  src: _4.default,
-	  alt: ''
-	}))), _jsx('div', {
-	  className: 'col-lg-6'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('h2', {
-	  className: 'display-4'
-	}, void 0, 'We salute you!'), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.'))))));
-	
-	var _ref5 = _jsx('section', {}, void 0, _jsx('div', {
-	  className: 'container'
-	}, void 0, _jsx('div', {
-	  className: 'row align-items-center'
-	}, void 0, _jsx('div', {
-	  className: 'col-lg-6 order-lg-2'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('img', {
-	  className: 'img-fluid rounded-circle',
-	  src: _6.default,
-	  alt: ''
-	}))), _jsx('div', {
-	  className: 'col-lg-6 order-lg-1'
-	}, void 0, _jsx('div', {
-	  className: 'p-5'
-	}, void 0, _jsx('h2', {
-	  className: 'display-4'
-	}, void 0, 'Let there be rock!'), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda ametaperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatummolestiae adipisci, beatae obcaecati.'))))));
-	
-	var _ref6 = _jsx('div', {
-	  className: 'container'
-	}, void 0, _jsx('p', {
-	  className: 'm-0 text-center text-white small'
-	}, void 0, 'Copyright \xA9 Your Website 2018'));
+	var _ref3 = _jsx('div', {
+	  className: 'social-icons'
+	}, void 0, _jsx('ul', {
+	  className: 'list-unstyled text-center mb-0'
+	}, void 0, _jsx('li', {
+	  className: 'list-unstyled-item'
+	}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, _jsx('i', {
+	  className: 'fa fa-twitter'
+	}))), _jsx('li', {
+	  className: 'list-unstyled-item'
+	}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, _jsx('i', {
+	  className: 'fa fa-facebook'
+	}))), _jsx('li', {
+	  className: 'list-unstyled-item'
+	}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, _jsx('i', {
+	  className: 'fa fa-instagram'
+	})))));
 	
 	function Main() {
 	  return _jsx('div', {}, void 0, _jsx(_reactHelmet2.default, {
@@ -1331,9 +1257,7 @@
 	      name: 'viewport',
 	      content: 'width=device-width, initial-scale=1'
 	    }]
-	  }), _ref, _ref2, _ref3, _ref4, _ref5, _jsx('footer', {
-	    className: 'py-5 bg-black'
-	  }, void 0, _ref6));
+	  }), _ref, _ref2, _ref3);
 	}
 	
 	// Retrieve data from store as props
@@ -1900,7 +1824,9 @@
 	_mongoose2.default.Promise = global.Promise;
 	
 	// MongoDB Connection
-	_mongoose2.default.connect(_config2.default.mongoURL, function (error) {
+	_mongoose2.default.connect(_config2.default.mongoURL, {
+	  useMongoClient: true
+	}).then(function () {}, function (error) {
 	  if (error) {
 	    console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
 	    throw error;
@@ -1908,6 +1834,8 @@
 	
 	  // feed some dummy data in DB.
 	  // dummyData();
+	}).catch(function (err) {
+	  console.error(err);
 	});
 	
 	// Apply body Parser and server public assets and routes

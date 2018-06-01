@@ -37,7 +37,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 43);
+/******/ 	return __webpack_require__(__webpack_require__.s = 42);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -89,7 +89,7 @@
 	exports.deletePost = deletePost;
 	exports.deletePostRequest = deletePostRequest;
 	
-	var _apiCaller = __webpack_require__(41);
+	var _apiCaller = __webpack_require__(39);
 	
 	var _apiCaller2 = _interopRequireDefault(_apiCaller);
 	
@@ -272,31 +272,31 @@
 	
 	var _reactIntl = __webpack_require__(2);
 	
-	var _intl = __webpack_require__(46);
+	var _intl = __webpack_require__(45);
 	
 	var _intl2 = _interopRequireDefault(_intl);
 	
-	var _intlLocalesSupported = __webpack_require__(47);
+	var _intlLocalesSupported = __webpack_require__(46);
 	
 	var _intlLocalesSupported2 = _interopRequireDefault(_intlLocalesSupported);
 	
-	__webpack_require__(48);
+	__webpack_require__(47);
 	
-	var _en = __webpack_require__(55);
+	var _en = __webpack_require__(54);
 	
 	var _en2 = _interopRequireDefault(_en);
 	
-	var _en3 = __webpack_require__(31);
+	var _en3 = __webpack_require__(29);
 	
 	var _en4 = _interopRequireDefault(_en3);
 	
-	__webpack_require__(49);
+	__webpack_require__(48);
 	
-	var _fr = __webpack_require__(56);
+	var _fr = __webpack_require__(55);
 	
 	var _fr2 = _interopRequireDefault(_fr);
 	
-	var _fr3 = __webpack_require__(32);
+	var _fr3 = __webpack_require__(30);
 	
 	var _fr4 = _interopRequireDefault(_fr3);
 	
@@ -534,11 +534,11 @@
 	
 	var _reactRedux = __webpack_require__(1);
 	
-	var _PostList = __webpack_require__(38);
+	var _PostList = __webpack_require__(36);
 	
 	var _PostList2 = _interopRequireDefault(_PostList);
 	
-	var _PostCreateWidget = __webpack_require__(37);
+	var _PostCreateWidget = __webpack_require__(35);
 	
 	var _PostCreateWidget2 = _interopRequireDefault(_PostCreateWidget);
 	
@@ -636,42 +636,12 @@
 
 /***/ },
 /* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _mongoose = __webpack_require__(9);
-	
-	var _mongoose2 = _interopRequireDefault(_mongoose);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var Schema = _mongoose2.default.Schema;
-	
-	var postSchema = new Schema({
-	  name: { type: 'String', required: true },
-	  title: { type: 'String', required: true },
-	  content: { type: 'String', required: true },
-	  slug: { type: 'String', required: true },
-	  cuid: { type: 'String', required: true },
-	  dateAdded: { type: 'Date', default: Date.now, required: true }
-	});
-	
-	exports.default = _mongoose2.default.model('Post', postSchema);
-
-/***/ },
-/* 17 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux");
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -710,7 +680,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(IntlWrapper);
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -731,7 +701,7 @@
 	
 	var _reactRouter = __webpack_require__(4);
 	
-	var _Main = __webpack_require__(36);
+	var _Main = __webpack_require__(34);
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
@@ -775,7 +745,7 @@
 	}));
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -786,17 +756,17 @@
 	});
 	exports.configureStore = configureStore;
 	
-	var _redux = __webpack_require__(17);
+	var _redux = __webpack_require__(16);
 	
-	var _reduxThunk = __webpack_require__(60);
+	var _reduxThunk = __webpack_require__(59);
 	
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 	
-	var _DevTools = __webpack_require__(33);
+	var _DevTools = __webpack_require__(31);
 	
 	var _DevTools2 = _interopRequireDefault(_DevTools);
 	
-	var _reducers = __webpack_require__(40);
+	var _reducers = __webpack_require__(38);
 	
 	var _reducers2 = _interopRequireDefault(_reducers);
 	
@@ -831,45 +801,7 @@
 	}
 
 /***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	exports.default = function () {
-	  _post2.default.count().exec(function (err, count) {
-	    if (count > 0) {
-	      return;
-	    }
-	
-	    var content1 = 'Sed ut perspiciatis unde omnis iste natus error\n      sit voluptatem accusantium doloremque laudantium, totam rem aperiam,\n      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae\n      vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit\n      aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos\n      qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem\n      ipsum quia dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut\n      enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi\n      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint\n      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id\n      est laborum';
-	
-	    var content2 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut\n      enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi\n      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint\n      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id\n      est laborum. Sed ut perspiciatis unde omnis iste natus error\n      sit voluptatem accusantium doloremque laudantium, totam rem aperiam,\n      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae\n      vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit\n      aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos\n      qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem\n      ipsum quia dolor sit amet.';
-	
-	    var post1 = new _post2.default({ name: 'Admin', title: 'Hello MERN', slug: 'hello-mern', cuid: 'cikqgkv4q01ck7453ualdn3hd', content: content1 });
-	    var post2 = new _post2.default({ name: 'Admin', title: 'Lorem Ipsum', slug: 'lorem-ipsum', cuid: 'cikqgkv4q01ck7453ualdn3hf', content: content2 });
-	
-	    _post2.default.create([post1, post2], function (error) {
-	      if (!error) {
-	        // console.log('ready to go....');
-	      }
-	    });
-	  });
-	};
-	
-	var _post = __webpack_require__(16);
-	
-	var _post2 = _interopRequireDefault(_post);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -881,7 +813,7 @@
 	
 	var _express = __webpack_require__(8);
 	
-	var _post = __webpack_require__(42);
+	var _post = __webpack_require__(40);
 	
 	var PostController = _interopRequireWildcard(_post);
 	
@@ -904,7 +836,7 @@
 	exports.default = router;
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -915,7 +847,7 @@
 	});
 	exports.fetchComponentData = fetchComponentData;
 	
-	var _promiseUtils = __webpack_require__(44);
+	var _promiseUtils = __webpack_require__(43);
 	
 	function fetchComponentData(store, components, params) {
 	  var needs = components.reduce(function (prev, current) {
@@ -931,16 +863,16 @@
 	  */
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
 	
 	var webpack = __webpack_require__(10);
-	var cssnext = __webpack_require__(52);
-	var postcssFocus = __webpack_require__(53);
-	var postcssReporter = __webpack_require__(54);
+	var cssnext = __webpack_require__(51);
+	var postcssFocus = __webpack_require__(52);
+	var postcssReporter = __webpack_require__(53);
 	
 	module.exports = {
 	  devtool: 'cheap-module-eval-source-map',
@@ -1005,43 +937,43 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, ""))
 
 /***/ },
-/* 25 */
+/* 23 */
 /***/ function(module, exports) {
 
 	module.exports = require("body-parser");
 
 /***/ },
-/* 26 */
+/* 24 */
 /***/ function(module, exports) {
 
 	module.exports = require("compression");
 
 /***/ },
-/* 27 */
+/* 25 */
 /***/ function(module, exports) {
 
 	module.exports = require("path");
 
 /***/ },
-/* 28 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-dom/server");
 
 /***/ },
-/* 29 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = require("webpack-dev-middleware");
 
 /***/ },
-/* 30 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = require("webpack-hot-middleware");
 
 /***/ },
-/* 31 */
+/* 29 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1071,7 +1003,7 @@
 	};
 
 /***/ },
-/* 32 */
+/* 30 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1101,7 +1033,7 @@
 	};
 
 /***/ },
-/* 33 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1117,13 +1049,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reduxDevtools = __webpack_require__(57);
+	var _reduxDevtools = __webpack_require__(56);
 	
-	var _reduxDevtoolsLogMonitor = __webpack_require__(59);
+	var _reduxDevtoolsLogMonitor = __webpack_require__(58);
 	
 	var _reduxDevtoolsLogMonitor2 = _interopRequireDefault(_reduxDevtoolsLogMonitor);
 	
-	var _reduxDevtoolsDockMonitor = __webpack_require__(58);
+	var _reduxDevtoolsDockMonitor = __webpack_require__(57);
 	
 	var _reduxDevtoolsDockMonitor2 = _interopRequireDefault(_reduxDevtoolsDockMonitor);
 	
@@ -1135,7 +1067,7 @@
 	}, void 0, _jsx(_reduxDevtoolsLogMonitor2.default, {})));
 
 /***/ },
-/* 34 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1162,7 +1094,7 @@
 	}
 
 /***/ },
-/* 35 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1176,7 +1108,7 @@
 	
 	var _setup = __webpack_require__(11);
 	
-	var _IntlActions = __webpack_require__(34);
+	var _IntlActions = __webpack_require__(32);
 	
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 	
@@ -1209,7 +1141,7 @@
 	exports.default = IntlReducer;
 
 /***/ },
-/* 36 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1414,7 +1346,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Main);
 
 /***/ },
-/* 37 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1514,7 +1446,7 @@
 	exports.default = (0, _reactIntl.injectIntl)(PostCreateWidget);
 
 /***/ },
-/* 38 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1533,7 +1465,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _PostListItem = __webpack_require__(39);
+	var _PostListItem = __webpack_require__(37);
 	
 	var _PostListItem2 = _interopRequireDefault(_PostListItem);
 	
@@ -1555,7 +1487,7 @@
 	exports.default = PostList;
 
 /***/ },
-/* 39 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1624,7 +1556,7 @@
 	exports.default = PostListItem;
 
 /***/ },
-/* 40 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1634,7 +1566,7 @@
 	  value: true
 	});
 	
-	var _redux = __webpack_require__(17);
+	var _redux = __webpack_require__(16);
 	
 	var _AppReducer = __webpack_require__(13);
 	
@@ -1644,7 +1576,7 @@
 	
 	var _PostReducer2 = _interopRequireDefault(_PostReducer);
 	
-	var _IntlReducer = __webpack_require__(35);
+	var _IntlReducer = __webpack_require__(33);
 	
 	var _IntlReducer2 = _interopRequireDefault(_IntlReducer);
 	
@@ -1663,7 +1595,7 @@
 	// Import Reducers
 
 /***/ },
-/* 41 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1675,7 +1607,7 @@
 	exports.API_URL = undefined;
 	exports.default = callApi;
 	
-	var _isomorphicFetch = __webpack_require__(50);
+	var _isomorphicFetch = __webpack_require__(49);
 	
 	var _isomorphicFetch2 = _interopRequireDefault(_isomorphicFetch);
 	
@@ -1716,7 +1648,7 @@
 	}
 
 /***/ },
-/* 42 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1730,19 +1662,19 @@
 	exports.getPost = getPost;
 	exports.deletePost = deletePost;
 	
-	var _post = __webpack_require__(16);
+	var _post = __webpack_require__(41);
 	
 	var _post2 = _interopRequireDefault(_post);
 	
-	var _cuid = __webpack_require__(45);
+	var _cuid = __webpack_require__(44);
 	
 	var _cuid2 = _interopRequireDefault(_cuid);
 	
-	var _limax = __webpack_require__(51);
+	var _limax = __webpack_require__(50);
 	
 	var _limax2 = _interopRequireDefault(_limax);
 	
-	var _sanitizeHtml = __webpack_require__(61);
+	var _sanitizeHtml = __webpack_require__(60);
 	
 	var _sanitizeHtml2 = _interopRequireDefault(_sanitizeHtml);
 	
@@ -1825,7 +1757,37 @@
 	}
 
 /***/ },
-/* 43 */
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _mongoose = __webpack_require__(9);
+	
+	var _mongoose2 = _interopRequireDefault(_mongoose);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Schema = _mongoose2.default.Schema;
+	
+	var postSchema = new Schema({
+	  name: { type: 'String', required: true },
+	  title: { type: 'String', required: true },
+	  content: { type: 'String', required: true },
+	  slug: { type: 'String', required: true },
+	  cuid: { type: 'String', required: true },
+	  dateAdded: { type: 'Date', default: Date.now, required: true }
+	});
+	
+	exports.default = _mongoose2.default.model('Post', postSchema);
+
+/***/ },
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1844,7 +1806,7 @@
 	
 	var _express2 = _interopRequireDefault(_express);
 	
-	var _compression = __webpack_require__(26);
+	var _compression = __webpack_require__(24);
 	
 	var _compression2 = _interopRequireDefault(_compression);
 	
@@ -1852,15 +1814,15 @@
 	
 	var _mongoose2 = _interopRequireDefault(_mongoose);
 	
-	var _bodyParser = __webpack_require__(25);
+	var _bodyParser = __webpack_require__(23);
 	
 	var _bodyParser2 = _interopRequireDefault(_bodyParser);
 	
-	var _path = __webpack_require__(27);
+	var _path = __webpack_require__(25);
 	
 	var _path2 = _interopRequireDefault(_path);
 	
-	var _IntlWrapper = __webpack_require__(18);
+	var _IntlWrapper = __webpack_require__(17);
 	
 	var _IntlWrapper2 = _interopRequireDefault(_IntlWrapper);
 	
@@ -1868,19 +1830,19 @@
 	
 	var _webpack2 = _interopRequireDefault(_webpack);
 	
-	var _webpackConfig = __webpack_require__(24);
+	var _webpackConfig = __webpack_require__(22);
 	
 	var _webpackConfig2 = _interopRequireDefault(_webpackConfig);
 	
-	var _webpackDevMiddleware = __webpack_require__(29);
+	var _webpackDevMiddleware = __webpack_require__(27);
 	
 	var _webpackDevMiddleware2 = _interopRequireDefault(_webpackDevMiddleware);
 	
-	var _webpackHotMiddleware = __webpack_require__(30);
+	var _webpackHotMiddleware = __webpack_require__(28);
 	
 	var _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);
 	
-	var _store = __webpack_require__(20);
+	var _store = __webpack_require__(19);
 	
 	var _reactRedux = __webpack_require__(1);
 	
@@ -1888,7 +1850,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _server = __webpack_require__(28);
+	var _server = __webpack_require__(26);
 	
 	var _reactRouter = __webpack_require__(4);
 	
@@ -1896,19 +1858,15 @@
 	
 	var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
 	
-	var _routes = __webpack_require__(19);
+	var _routes = __webpack_require__(18);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _fetchData = __webpack_require__(23);
+	var _fetchData = __webpack_require__(21);
 	
-	var _post = __webpack_require__(22);
+	var _post = __webpack_require__(20);
 	
 	var _post2 = _interopRequireDefault(_post);
-	
-	var _dummyData = __webpack_require__(21);
-	
-	var _dummyData2 = _interopRequireDefault(_dummyData);
 	
 	var _config = __webpack_require__(7);
 	
@@ -1935,6 +1893,8 @@
 	
 	// Import required modules
 	
+	// import dummyData from './dummyData';
+	
 	
 	// Set native promises as mongoose promise
 	_mongoose2.default.Promise = global.Promise;
@@ -1947,7 +1907,7 @@
 	  }
 	
 	  // feed some dummy data in DB.
-	  (0, _dummyData2.default)();
+	  // dummyData();
 	});
 	
 	// Apply body Parser and server public assets and routes
@@ -2015,7 +1975,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, "server"))
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2046,103 +2006,103 @@
 	}
 
 /***/ },
-/* 45 */
+/* 44 */
 /***/ function(module, exports) {
 
 	module.exports = require("cuid");
 
 /***/ },
-/* 46 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl");
 
 /***/ },
-/* 47 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl-locales-supported");
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl/locale-data/jsonp/en");
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = require("intl/locale-data/jsonp/fr");
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports) {
 
 	module.exports = require("isomorphic-fetch");
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = require("limax");
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-cssnext");
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-focus");
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = require("postcss-reporter");
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-intl/locale-data/en");
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-intl/locale-data/fr");
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools");
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools-dock-monitor");
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-devtools-log-monitor");
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports) {
 
 	module.exports = require("redux-thunk");
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = require("sanitize-html");

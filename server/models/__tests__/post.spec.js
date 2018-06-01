@@ -10,16 +10,17 @@ const posts = [
   new Post({ name: 'Mayank', title: 'Hi Mern', slug: 'hi-mern', cuid: 'f34gb2bh24b24b3', content: "All dogs bark 'mern!'" }),
 ];
 
-test.beforeEach('connect and add two post entries', t => {
+test.beforeEach.cb('connect and add two post entries', t => {
   connectDB(t, () => {
     Post.create(posts, err => {
       if (err) t.fail('Unable to create posts');
+      t.end();
     });
   });
 });
 
-test.afterEach.always(t => {
-  dropDB(t);
+test.afterEach.always(async t => {
+  await dropDB(t);
 });
 
 test.serial('Should correctly give number of Posts', async t => {

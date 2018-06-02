@@ -464,13 +464,13 @@
 	var _reactIntl = __webpack_require__(2);
 	
 	var _PostListItem = {
-	  "single-post": "_3B15Q62CNe0LaxJ8BUZr5W",
-	  "post-title": "_3mZF-WLrnBUxaWr9zFi6Q_",
-	  "author-name": "_1cSDPptMi8rvUEB2tAonlW",
-	  "post-desc": "_3D8Fgk2edKTkFyBDsUEZ2u",
-	  "post-action": "_3S84cKmlvGO49pK1biPlXr",
-	  "divider": "y2SIF3ydn02JYMgeklO7S",
-	  "post-detail": "_3W9vrxIdnQ93EmH-x2UgJR"
+	  "single-post": "_3oms2qtMeNLzxFyWhz1UjH",
+	  "post-title": "Fx0K-JjzVTK_Hda2lbMwV",
+	  "author-name": "_2caUnFJtR_wmYTrmTKSfe3",
+	  "post-desc": "_3DFNNMDbgnfiiKf0QUXlx8",
+	  "post-action": "_3nmYwr6m0EtFpfy5dzRt03",
+	  "divider": "_32kJpPVOubCfe-7yq6ODMb",
+	  "post-detail": "_1WzGcCTfKlAsd1za9Ty-S-"
 	};
 	
 	var _PostListItem2 = _interopRequireDefault(_PostListItem);
@@ -895,9 +895,9 @@
 	
 	  module: {
 	    loaders: [{
-	      test: /\.css$/,
+	      test: /\.scss$/,
 	      exclude: /node_modules/,
-	      loader: 'style-loader!css-loader?localIdentName=[name]__[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader'
+	      loader: 'style-loader!css-loader?localIdentName=[name]__[local]__[hash:base64:5]&modules&importLoaders=1&sourceMap!postcss-loader!sass-loader?sourceMap'
 	    }, {
 	      test: /\.css$/,
 	      include: /node_modules/,
@@ -1154,13 +1154,11 @@
 	var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
 	
 	// Import Style
-	// import styles from './App.css';
-	// import styles from './Main.css';
+	// import styles from './App.scss';
+	
 	
 	// Import Assets
-	// import image1 from './assets/images/01.jpg';
-	// import image2 from './assets/images/02.jpg';
-	// import image3 from './assets/images/03.jpg';
+	
 	
 	// Import Components
 	
@@ -1172,6 +1170,62 @@
 	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactRedux = __webpack_require__(1);
+	
+	var _Main;
+	
+	var _Main2 = _interopRequireDefault(_Main);
+	
+	var _logo = "data:image/png;base64,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";
+	
+	var _logo2 = _interopRequireDefault(_logo);
+	
+	var _ = '/' + "91597607880385370e86066422823940.jpg";
+	
+	var _2 = _interopRequireDefault(_);
+	
+	var _3 = '/' + "4b6185c0e1dcf859f278b0ec421e6a37.jpg";
+	
+	var _4 = _interopRequireDefault(_3);
+	
+	var _5 = '/' + "13355d3949dffa4cb85caaf7f2dffdc5.jpg";
+	
+	var _6 = _interopRequireDefault(_5);
+	
+	var _7 = '/' + "ee552cb25d5bd15e1d17170eaecb4e28.jpg";
+	
+	var _8 = _interopRequireDefault(_7);
+	
+	var _9 = '/' + "33a308742c5ab98f3f6718e6ed5102c0.jpg";
+	
+	var _10 = _interopRequireDefault(_9);
+	
+	var _11 = '/' + "e3a912e8dbcfbd13631bf41f4d4c7453.jpg";
+	
+	var _12 = _interopRequireDefault(_11);
+	
+	var _13 = '/' + "6d7441f731d4907f4c7f45952d36ed55.jpg";
+	
+	var _14 = _interopRequireDefault(_13);
+	
+	var _15 = '/' + "81f968bec13b2c99a5ba6bcb1f75984a.jpg";
+	
+	var _16 = _interopRequireDefault(_15);
+	
+	var _17 = '/' + "965c4344996ea33030b0ca9e91ec6b7c.jpg";
+	
+	var _18 = _interopRequireDefault(_17);
+	
+	var _19 = '/' + "a019e32e0961043e1ad9d3fd39022097.jpg";
+	
+	var _20 = _interopRequireDefault(_19);
+	
+	var _21 = '/' + "9bb52dc62c679cb382e0ec6b254496d4.jpg";
+	
+	var _22 = _interopRequireDefault(_21);
+	
+	var _23 = '/' + "79fc837a567a8a0edbbd7ec52110fa71.jpg";
+	
+	var _24 = _interopRequireDefault(_23);
 	
 	var _reactHelmet = __webpack_require__(3);
 	
@@ -1187,64 +1241,401 @@
 	// import { toggleAddPost } from './AppActions';
 	// import { switchLanguage } from '../../modules/Intl/IntlActions';
 	
-	var _ref = _jsx('div', {
-	  className: 'overlay'
-	});
+	var _ref = _jsx('nav', {
+	  className: 'navbar navbar-default navbar-static-top text-center',
+	  role: 'navigation'
+	}, void 0, _jsx('div', {
+	  className: 'container'
+	}, void 0, _jsx('div', {
+	  className: 'navbar-header'
+	}, void 0, _jsx('button', {
+	  type: 'button',
+	  className: 'navbar-toggle',
+	  'data-toggle': 'collapse',
+	  'data-target': '#bs-example-navbar-collapse-1'
+	}, void 0, _jsx('span', {
+	  className: 'sr-only'
+	}, void 0, 'Toggle navigation'), _jsx('span', {
+	  className: 'icon-bar'
+	}), _jsx('span', {
+	  className: 'icon-bar'
+	}), _jsx('span', {
+	  className: 'icon-bar'
+	})), _jsx('a', {
+	  className: 'navbar-brand',
+	  href: '#'
+	}, void 0, _jsx('img', {
+	  src: _logo2.default,
+	  className: 'hidden-xs',
+	  alt: ''
+	}), _jsx('h3', {
+	  className: 'visible-xs'
+	}, void 0, 'Korona'))), _jsx('div', {
+	  className: 'collapse navbar-collapse',
+	  id: 'bs-example-navbar-collapse-1'
+	}, void 0, _jsx('ul', {
+	  className: 'nav navbar-nav navbar-right'
+	}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  className: 'page-scroll',
+	  href: 'index.html'
+	}, void 0, 'Home')), _jsx('li', {}, void 0, _jsx('a', {
+	  className: 'page-scroll',
+	  href: 'single.html'
+	}, void 0, 'About')), _jsx('li', {}, void 0, _jsx('a', {
+	  className: 'page-scroll',
+	  href: 'archive.html'
+	}, void 0, 'Staff')), _jsx('li', {}, void 0, _jsx('a', {
+	  className: 'page-scroll',
+	  href: 'contact.html'
+	}, void 0, 'Contact Us'))))));
 	
-	var _ref2 = _jsx('div', {
-	  className: 'masthead'
+	var _ref2 = _jsx('header', {}, void 0, _jsx('div', {
+	  id: 'carousel-example-generic',
+	  className: 'carousel slide',
+	  'data-ride': 'carousel'
+	}, void 0, _jsx('ol', {
+	  className: 'carousel-indicators'
+	}, void 0, _jsx('li', {
+	  'data-target': '#carousel-example-generic',
+	  'data-slide-to': '0',
+	  className: 'active'
+	}), _jsx('li', {
+	  'data-target': '#carousel-example-generic',
+	  'data-slide-to': '1'
+	})), _jsx('div', {
+	  className: 'carousel-inner'
 	}, void 0, _jsx('div', {
-	  className: 'masthead-bg'
+	  className: 'item active'
+	}, void 0, _jsx('img', {
+	  src: _2.default,
+	  alt: 'First slide'
 	}), _jsx('div', {
-	  className: 'container h-100'
+	  className: 'header-text'
 	}, void 0, _jsx('div', {
-	  className: 'row h-100'
+	  className: 'col-md-12 text-center'
+	}, void 0, _jsx('h2', {}, void 0, 'Welcome to Us !'), _jsx('br', {}), _jsx('h3', {}, void 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'), _jsx('br', {})))), _jsx('div', {
+	  className: 'item'
+	}, void 0, _jsx('img', {
+	  src: _4.default,
+	  alt: 'Second slide'
+	}), _jsx('div', {
+	  className: 'header-text'
 	}, void 0, _jsx('div', {
-	  className: 'col-12 my-auto'
+	  className: 'col-md-12 text-center'
+	}, void 0, _jsx('h2', {}, void 0, 'Sed diam nonumy eirmod tempor invidunt'), _jsx('br', {}), _jsx('h3', {}, void 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'), _jsx('br', {}))))), _jsx('a', {
+	  className: 'left carousel-control',
+	  href: '#carousel-example-generic',
+	  'data-slide': 'prev'
+	}, void 0, _jsx('span', {
+	  className: 'glyphicon glyphicon-chevron-left'
+	})), _jsx('a', {
+	  className: 'right carousel-control',
+	  href: '#carousel-example-generic',
+	  'data-slide': 'next'
+	}, void 0, _jsx('span', {
+	  className: 'glyphicon glyphicon-chevron-right'
+	}))));
+	
+	var _ref3 = _jsx('a', {
+	  id: 'backTop'
+	}, void 0, 'Back To Top');
+	
+	var _ref4 = _jsx('div', {
+	  id: 'page-content',
+	  className: 'index-page'
+	}, void 0, _jsx('section', {
+	  className: 'box-content box-1 text-center'
 	}, void 0, _jsx('div', {
-	  className: 'masthead-content text-white py-5 py-md-0'
-	}, void 0, _jsx('h1', {
-	  className: 'mb-3'
-	}, void 0, 'Coming Soon!'), _jsx('p', {
-	  className: 'mb-5'
-	}, void 0, 'We\'re working hard to finish the development of this site. Our target launch date is', _jsx('strong', {}, void 0, 'January 2019'), '! Sign up for updates using the form below!'), _jsx('div', {
-	  className: 'input-group input-group-newsletter'
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-sm-4 bg-1'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Text Heading')), _jsx('p', {}, void 0, 'Nam libero tempore, cum soluta nobis est eligendi optio cumque quod maxime placeat facere possimus nihil impedit quo minus id quod maxime placeat facere possimus ptio cumque quod maxime ibero tempore, cum soluta nobis.'), _jsx('a', {
+	  className: 'btn btn-1'
+	}, void 0, 'Learn More'))), _jsx('div', {
+	  className: 'col-sm-4 bg-2'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Text Heading')), _jsx('p', {}, void 0, 'Nam libero tempore, cum soluta nobis est eligendi optio cumque quod maxime placeat facere possimus nihil impedit quo minus id quod maxime placeat facere possimus ptio cumque quod maxime ibero tempore, cum soluta nobis.'), _jsx('a', {
+	  className: 'btn btn-1'
+	}, void 0, 'Learn More'))), _jsx('div', {
+	  className: 'col-sm-4 bg-3'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Text Heading')), _jsx('p', {}, void 0, 'Nam libero tempore, cum soluta nobis est eligendi optio cumque quod maxime placeat facere possimus nihil impedit quo minus id quod maxime placeat facere possimus ptio cumque quod maxime ibero tempore, cum soluta nobis.'), _jsx('a', {
+	  className: 'btn btn-1'
+	}, void 0, 'Learn More')))), _jsx('div', {
+	  className: 'clear'
+	})), _jsx('section', {
+	  className: 'box-content box-2 box-bg-white'
+	}, void 0, _jsx('div', {
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-sm-6 fix-right'
+	}, void 0, _jsx('div', {
+	  className: 'box-image'
+	}, void 0, _jsx('img', {
+	  className: 'media__image',
+	  src: _24.default
+	}))), _jsx('div', {
+	  className: 'col-sm-6'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'About'), _jsx('span', {}, void 0, 'SED NONUMY ', _jsx('br', {}), 'UT LABORE ALIQUYAM')), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in.')))), _jsx('div', {
+	  className: 'clear'
+	})), _jsx('section', {
+	  className: 'box-content box-3'
+	}, void 0, _jsx('div', {
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _6.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name'))))), _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _8.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name'))))), _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _10.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name'))))), _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _12.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name'))))), _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _14.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name'))))), _jsx('div', {
+	  className: 'col-lg-4 col-sm-6'
+	}, void 0, _jsx('a', {
+	  href: '#',
+	  className: 'portfolio-box'
+	}, void 0, _jsx('img', {
+	  src: _16.default,
+	  className: 'img-responsive',
+	  alt: ''
+	}), _jsx('div', {
+	  className: 'portfolio-box-caption'
+	}, void 0, _jsx('div', {
+	  className: 'portfolio-box-caption-content'
+	}, void 0, _jsx('div', {
+	  className: 'project-category text-faded'
+	}, void 0, 'Category'), _jsx('div', {
+	  className: 'project-name'
+	}, void 0, 'Project Name')))))), _jsx('div', {
+	  className: 'clear'
+	})), _jsx('section', {
+	  className: 'box-content box-4 box-bg-black'
+	}, void 0, _jsx('div', {
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-sm-6'
+	}, void 0, _jsx('div', {
+	  className: 'box-image'
+	}, void 0, _jsx('img', {
+	  className: 'media__image ',
+	  src: _22.default
+	}))), _jsx('div', {
+	  className: 'col-sm-6'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'welcome'), _jsx('span', {}, void 0, 'EUM IRIURE DOLOR ', _jsx('br', {}), 'IN HENDRERIT DUIS')), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in.')))), _jsx('div', {
+	  className: 'clear'
+	})), _jsx('section', {
+	  className: 'box-content box-5'
+	}, void 0, _jsx('div', {
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-sm-6 bg-3'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Sign Up'), _jsx('span', {}, void 0, 'Get subscriber only insights & news ', _jsx('br', {}), 'delivered by John Doe')), _jsx('p', {}, void 0, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores...'), _jsx('form', {
+	  name: 'form1',
+	  method: 'post',
+	  action: ''
+	}, void 0, _jsx('div', {
+	  className: 'row'
+	}, void 0, _jsx('div', {
+	  className: 'col-md-8'
+	}, void 0, _jsx('div', {
+	  className: 'form-group'
 	}, void 0, _jsx('input', {
 	  type: 'email',
-	  className: 'form-control',
-	  placeholder: 'Enter email...',
-	  'aria-label': 'Enter email...',
-	  'aria-describedby': 'basic-addon'
-	}), _jsx('div', {
-	  className: 'input-group-append'
+	  className: 'form-control input-lg',
+	  name: 'email',
+	  id: 'email',
+	  placeholder: 'Enter Your Email',
+	  required: 'required'
+	}))), _jsx('div', {
+	  className: 'col-md-4'
 	}, void 0, _jsx('button', {
-	  className: 'btn btn-secondary',
-	  type: 'button'
-	}, void 0, 'Notify Me!'))))))));
-	
-	var _ref3 = _jsx('div', {
-	  className: 'social-icons'
-	}, void 0, _jsx('ul', {
-	  className: 'list-unstyled text-center mb-0'
-	}, void 0, _jsx('li', {
-	  className: 'list-unstyled-item'
-	}, void 0, _jsx('a', {
-	  href: '#'
-	}, void 0, _jsx('i', {
-	  className: 'fa fa-twitter'
-	}))), _jsx('li', {
-	  className: 'list-unstyled-item'
-	}, void 0, _jsx('a', {
-	  href: '#'
+	  type: 'submit',
+	  className: 'btn btn-letter',
+	  name: 'btnSubcribe',
+	  id: 'btnSubcribe'
+	}, void 0, 'Submit')))))), _jsx('div', {
+	  className: 'col-sm-6 bg-0'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Contact')), _jsx('p', {}, void 0, _jsx('i', {
+	  className: 'fa fa-map-marker'
+	}), ' My Company Glasgow D04 89GR'), _jsx('p', {}, void 0, _jsx('i', {
+	  className: 'fa fa-phone'
+	}), ' 800-2345-6789'), _jsx('p', {}, void 0, _jsx('i', {
+	  className: 'fa fa-phone'
+	}), ' 800-2345-6789'), _jsx('p', {}, void 0, _jsx('i', {
+	  className: 'fa fa-envelope-o'
+	}), ' info@demolink.org'), _jsx('p', {}, void 0, _jsx('i', {
+	  className: 'fa fa-clock-o'
+	}), ' 7 Days a week from 9:00 am to 7:00 pm'), _jsx('ul', {
+	  className: 'list-inline social-link'
+	}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  href: ''
 	}, void 0, _jsx('i', {
 	  className: 'fa fa-facebook'
-	}))), _jsx('li', {
-	  className: 'list-unstyled-item'
-	}, void 0, _jsx('a', {
-	  href: '#'
+	}))), _jsx('li', {}, void 0, _jsx('a', {
+	  href: ''
 	}, void 0, _jsx('i', {
-	  className: 'fa fa-instagram'
-	})))));
+	  className: 'fa fa-twitter'
+	}))), _jsx('li', {}, void 0, _jsx('a', {
+	  href: ''
+	}, void 0, _jsx('i', {
+	  className: 'fa fa-google-plus'
+	}))))))), _jsx('div', {
+	  className: 'clear'
+	})));
+	
+	var _ref5 = _jsx('footer', {}, void 0, _jsx('div', {
+	  className: 'wrap-footer'
+	}, void 0, _jsx('div', {
+	  className: 'no-gutter'
+	}, void 0, _jsx('div', {
+	  className: 'col-md-6'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('div', {
+	  className: 'footer-heading'
+	}, void 0, _jsx('h2', {}, void 0, 'Text Heading')), _jsx('p', {}, void 0, 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.'), _jsx('p', {}, void 0, 'Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.'), _jsx('br', {}), _jsx('p', {}, void 0, 'Copyright @ Korona - Designed by ', _jsx('a', {
+	  href: 'https://www.Zerotheme.com'
+	}, void 0, 'Zerotheme')))), _jsx('div', {
+	  className: 'col-md-3'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('h5', {}, void 0, 'Financial Planning'), _jsx('ul', {
+	  className: 'quick-link list-group'
+	}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Investment Management')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Retirement Planning')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Long Term Care')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Estate Planning')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Social Security'))))), _jsx('div', {
+	  className: 'col-md-3'
+	}, void 0, _jsx('div', {
+	  className: 'box-text'
+	}, void 0, _jsx('h5', {}, void 0, 'Investment Help'), _jsx('ul', {
+	  className: 'quick-link list-group'
+	}, void 0, _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Wealth Management')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Retirement & College Savings')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Business Owners')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Insurance & Annuities')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Cash & Credit')), _jsx('li', {}, void 0, _jsx('a', {
+	  href: '#'
+	}, void 0, 'Stocks, Bonds & Mutual Funds')))))), _jsx('div', {
+	  className: 'clear'
+	})));
 	
 	function Main() {
 	  return _jsx('div', {}, void 0, _jsx(_reactHelmet2.default, {
@@ -1257,7 +1648,7 @@
 	      name: 'viewport',
 	      content: 'width=device-width, initial-scale=1'
 	    }]
-	  }), _ref, _ref2, _ref3);
+	  }), _ref, _ref2, _ref3, _ref4, _ref5);
 	}
 	
 	// Retrieve data from store as props
@@ -1292,12 +1683,12 @@
 	var _reactIntl = __webpack_require__(2);
 	
 	var _PostCreateWidget = {
-	  "form": "_1HNxVmVCIfsWU6Q22cRSd7",
-	  "form-content": "VlHIHfXe5nkoruuc0N8pJ",
-	  "form-title": "_32cczwmKrlcNdTsvCr-oBL",
-	  "form-field": "_1srubE9zVaJuCqkgKCA3lY",
-	  "post-submit-button": "_2m9Bzr_sJcQ7FK3o3X0PBL",
-	  "appear": "_30KT3DYyUvGj_5sBYnixvw"
+	  "form": "T84Ec1iQdmBAGKj9gbkSH",
+	  "form-content": "_2Y1tDTRWJZk-8U52bIXRke",
+	  "form-title": "_3TE7KAEFX90owO2pKtN1gt",
+	  "form-field": "_-xF9pnKkSB-H3xhOa0BzM",
+	  "post-submit-button": "_3aowHPFS14SEJ9rkAzB_sc",
+	  "appear": "_2xPTJpHmu_bGBQV7rav4GG"
 	};
 	
 	var _PostCreateWidget2 = _interopRequireDefault(_PostCreateWidget);
@@ -1435,13 +1826,13 @@
 	var _reactIntl = __webpack_require__(2);
 	
 	var _PostListItem = {
-	  "single-post": "_3B15Q62CNe0LaxJ8BUZr5W",
-	  "post-title": "_3mZF-WLrnBUxaWr9zFi6Q_",
-	  "author-name": "_1cSDPptMi8rvUEB2tAonlW",
-	  "post-desc": "_3D8Fgk2edKTkFyBDsUEZ2u",
-	  "post-action": "_3S84cKmlvGO49pK1biPlXr",
-	  "divider": "y2SIF3ydn02JYMgeklO7S",
-	  "post-detail": "_3W9vrxIdnQ93EmH-x2UgJR"
+	  "single-post": "_3oms2qtMeNLzxFyWhz1UjH",
+	  "post-title": "Fx0K-JjzVTK_Hda2lbMwV",
+	  "author-name": "_2caUnFJtR_wmYTrmTKSfe3",
+	  "post-desc": "_3DFNNMDbgnfiiKf0QUXlx8",
+	  "post-action": "_3nmYwr6m0EtFpfy5dzRt03",
+	  "divider": "_32kJpPVOubCfe-7yq6ODMb",
+	  "post-detail": "_1WzGcCTfKlAsd1za9Ty-S-"
 	};
 	
 	var _PostListItem2 = _interopRequireDefault(_PostListItem);
@@ -1853,7 +2244,7 @@
 	  var assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
 	  var chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 	
-	  return '\n    <!doctype html>\n    <html>\n      <head>\n        ' + head.base.toString() + '\n        ' + head.title.toString() + '\n        ' + head.meta.toString() + '\n        ' + head.link.toString() + '\n        ' + head.script.toString() + '\n\n        ' + (isProdMode ? '<link rel=\'stylesheet\' href=\'' + assetsManifest['/app.css'] + '\' />' : '') + '\n        <link href=\'https://fonts.googleapis.com/css?family=Lato:400,300,700\' rel=\'stylesheet\' type=\'text/css\'/>\n        <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />\n      </head>\n      <body>\n        <div id="root">' + html + '</div>\n        <script>\n          window.__INITIAL_STATE__ = ' + JSON.stringify(initialState) + ';\n          ' + (isProdMode ? '//<![CDATA[\n          window.webpackManifest = ' + JSON.stringify(chunkManifest) + ';\n          //]]>' : '') + '\n        </script>\n        <script src=\'' + (isProdMode ? assetsManifest['/vendor.js'] : '/vendor.js') + '\'></script>\n        <script src=\'' + (isProdMode ? assetsManifest['/app.js'] : '/app.js') + '\'></script>\n      </body>\n    </html>\n  ';
+	  return '\n    <!doctype html>\n    <html>\n      <head>\n        ' + head.base.toString() + '\n        ' + head.title.toString() + '\n        ' + head.meta.toString() + '\n        ' + head.link.toString() + '\n        ' + head.script.toString() + '\n\n        ' + (isProdMode ? '<link rel=\'stylesheet\' href=\'' + assetsManifest['/app.css'] + '\' />' : '') + '\n        <link href=\'https://fonts.googleapis.com/css?family=Lato:400,300,700\' rel=\'stylesheet\' type=\'text/css\'/>\n        <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />\n        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />\n      </head>\n      <body>\n        <div id="root">' + html + '</div>\n        <script>\n          window.__INITIAL_STATE__ = ' + JSON.stringify(initialState) + ';\n          ' + (isProdMode ? '//<![CDATA[\n          window.webpackManifest = ' + JSON.stringify(chunkManifest) + ';\n          //]]>' : '') + '\n        </script>\n        <script src=\'' + (isProdMode ? assetsManifest['/vendor.js'] : '/vendor.js') + '\'></script>\n        <script src=\'' + (isProdMode ? assetsManifest['/app.js'] : '/app.js') + '\'></script>\n      </body>\n    </html>\n  ';
 	};
 	
 	var renderError = function renderError(err) {

@@ -7,16 +7,27 @@
   * `git clone [REPO URL]`
 3. Create new branch to host changes
   * `git checkout -b [NEW BRANCH NAME]`
-4. Make changes on new branch
-5. Add and commit changes locally
+4. Start project (See [**Starting up app**](#starting-up-app))
+5. Make changes on new branch
+6. Add and commit changes locally
   * `git add .` - Adds all new changes to git's staging
   * `git commit -m [COMMIT MESSAGE]` - Commits staged files/folders locally
-6. Check the git logs to make sure your commit is in place and clean up all the commits you have made
+7. Check the git logs to make sure your commit is in place and clean up all the commits you have made
   * `git log` - Shows git's log history
-7. Push new branch to _**your fork**_ - *if you cloned from your fork and __NOT__ the main repo this will work*
+8. Push new branch to _**your fork**_ - *if you cloned from your fork and __NOT__ the main repo this will work*
   * `git push origin [BRANCH NAME]` - You can check which branch you are on with *`git branch`*
-8. Go to forked repo on Github and change to the branch you pushed
-9. If you want to submit changes to original repo submit a pull request
+9. Go to forked repo on Github and change to the branch you pushed
+10. If you want to submit changes to original repo submit a pull request
+
+## Starting up app
+##### *You can check the [package.json](package.json) file for the scripts that are available to run*
+#### Development Mode
+* `npm run start:dev` or `yarn run start:dev`
+  * This will reload the app anytime you make changes to a server file
+* Check the app out at http://localhost:8000
+#### Production Mode
+* `npm run start` or `yarn run start`
+* Check the app out at http://localhost:8000
 
 ## Project structure
 ```
@@ -32,7 +43,7 @@
   index.js - starting file that is executed to run app
 ```
 
-## Adding a new route to **server/server.js**
+## Adding a new route to [**server/server.js**](server/server.js)
 1. Add line below all the others
   * `app.use('[YOUR ROUTE URL]', express.static(path.join(__dirname, '../client/[YOUR CLIENT PATH]')));`
 2. Create your folder inside **client/** that contains files to server

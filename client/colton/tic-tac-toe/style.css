@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+td {
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  position: relative;
+}
+
+td:hover::before {
+  content: "X";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+td:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+tr:nth-child(2) td {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
